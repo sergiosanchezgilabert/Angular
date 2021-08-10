@@ -1,0 +1,19 @@
+<h1 class="centrar">Lista de Personas</h1>
+<hr>
+<div class="container-card">
+<ng-container *ngFor="let persona of personas">
+    <div class="card">
+        <p class="linea">ID: {{ persona.id_persona }}</p>
+        <p class="linea">User: {{ persona.user }}</p>
+        <p class="linea">Password: {{ persona.password }}</p>
+        <p class="linea">Surname: {{ persona.surname }}</p>
+        <p class="linea">City: {{ persona.city }}</p>
+        <p class="linea">Active: {{ persona.active }}</p>
+        <p class="linea">Personal_email: {{ persona.personal_email }}</p>
+        <p class="linea">Company_email: {{ persona.company_email }}</p>
+        <p class="linea">Creation_date: {{ persona.create_date }}</p>
+        <p class="linea">Image_url: {{ persona.imagen_url }}</p>
+
+    </div>
+</ng-container>
+</div>

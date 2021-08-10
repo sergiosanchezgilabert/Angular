@@ -1,0 +1,18 @@
+.container-card{
+display: flex;
+flex-flow: row wrap;
+justify-content: center;
+}
+
+.card{
+    margin-right: 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+    background: cornflowerblue;
+}
+
+.linea{
+    margin-left: 5px;
+    font-weight: bold;
+    font-size: medium;
+}
