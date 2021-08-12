@@ -1,0 +1,30 @@
+{
+  "personas": [
+    {
+      "user": "juanjose",
+      "password": "1523",
+      "surname": "GomezNoya",
+      "company_email": "josecompany@gmail.com",
+      "personal_email": "josepersonal@gmail.com",
+      "city": "Jaen",
+      "active": true,
+      "create_date": "2020-04-19T00:00:00.000+00:00",
+      "imagen_url": "url1",
+      "termination_date": "2020-08-25T00:00:00.000+00:00",
+      "id": 1
+    },
+    {
+      "user": "juanjose",
+      "password": "1523",
+      "surname": "Gomez",
+      "company_email": "josecompany@gmail.com",
+      "personal_email": "josepersonal@gmail.com",
+      "city": "Malaga",
+      "active": true,
+      "create_date": "2020-04-19T00:00:00.000+00:00",
+      "imagen_url": "url1",
+      "termination_date": "2020-08-25T00:00:00.000+00:00",
+      "id": 2
+    }
+  ]
+}

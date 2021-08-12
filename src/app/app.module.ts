@@ -8,12 +8,22 @@ import { PersonasComponent } from './personas/personas.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AniadirPersonaComponent } from './aniadir-persona/aniadir-persona.component';
+import { EditarPersonaComponent } from './editar-persona/editar-persona.component';
+import { BorrarPersonaComponent } from './borrar-persona/borrar-persona.component';
+import { ListarComponent } from './listar/listar.component';
+import { ContadorComponent } from './contador/contador.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonasComponent,
-    FormularioComponent
+    FormularioComponent,
+    AniadirPersonaComponent,
+    EditarPersonaComponent,
+    BorrarPersonaComponent,
+    ListarComponent,
+    ContadorComponent
   ],
   imports: [
     BrowserModule,

@@ -293,7 +293,7 @@ svg#clouds {
 }
 
 /*Mio*/
-.container-boton{
+.container-boton {
   display: flex;
   justify-content: center;
 
@@ -304,4 +304,17 @@ svg#clouds {
   padding: 10px;
   border-radius: 10px;
   border: none;
+}
+
+.boton-aniadir {
+  background-color: greenyellow;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.container-card {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }

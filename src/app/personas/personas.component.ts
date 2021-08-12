@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {  } from '../models/reques-response';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
+import { ResponsePersona } from '../models/reques-response';
 import { PersonasService } from '../services/personas.service';
 
 @Component({
@@ -9,20 +10,28 @@ import { PersonasService } from '../services/personas.service';
 })
 export class PersonasComponent implements OnInit {
 
-  public personas: any = []
+  @Input() persona: ResponsePersona;
 
-  constructor( private personasService: PersonasService) { 
+  @Output() propagar = new EventEmitter<number>();
+
+  constructor(private personasService: PersonasService, private router: Router) {
+  }
+
+  editar(id: number) {
+    this.router.navigate(['/editar', id]);
+  }
+
+  borrar(id: number) {
+
+    this.personasService.eliminarPersona(id)
+      .subscribe((resp) => {
+        alert("Eliminado")
+      })
+
+    this.propagar.emit(id);
   }
 
   ngOnInit(): void {
-var persona;
-    this.personasService.cargarPersonas()
-    .subscribe( (resp) => {
-      console.log(resp[0].user)
-      this.personas=resp;
-      console.log(this.personas)
-    });
-
 
   }
 }
