@@ -1,1 +1,10 @@
-<p>listar works!</p>
+<h1 class="centrar">Lista de Personas</h1>
+<hr>
+<p>Contador de borrados -> {{contador.numero}}</p>
+<div  class="container-card">
+  <div *ngFor="let persona of personas">
+    <div >
+      <app-personas (propagar)="procesarBorrado($event)" [persona]="persona"></app-personas>
+    </div>
+  </div>
+</div>

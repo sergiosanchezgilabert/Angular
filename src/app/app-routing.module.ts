@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { BorrarPersonaComponent } from './borrar-persona/borrar-persona.component';
 import { EditarPersonaComponent } from './editar-persona/editar-persona.component';
 import { FormularioComponent } from './formulario/formulario.component';
+import { ListarComponent } from './listar/listar.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'inicio',
     component: AppComponent
+  },
+  {
+    path: 'lista',
+    component: ListarComponent
   }
 ];
 

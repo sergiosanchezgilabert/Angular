@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +13,8 @@ import { EditarPersonaComponent } from './editar-persona/editar-persona.componen
 import { BorrarPersonaComponent } from './borrar-persona/borrar-persona.component';
 import { ListarComponent } from './listar/listar.component';
 import { ContadorComponent } from './contador/contador.component';
+
+import {MaterialModule} from './material'
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { ContadorComponent } from './contador/contador.component';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

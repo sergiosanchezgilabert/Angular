@@ -62,6 +62,7 @@ export class FormularioComponent implements OnInit, OnChanges {
     .subscribe(() => {
       alert("Añadido")
     })
+    this.router.navigateByUrl('lista');
   }
 
   enviarDatos(id: number) {
@@ -71,7 +72,7 @@ export class FormularioComponent implements OnInit, OnChanges {
       .subscribe(() => {
         alert("Editado")
       })
-    this.router.navigateByUrl('inicio');
+    this.router.navigateByUrl('lista');
   }
 
 }

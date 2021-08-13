@@ -11,37 +11,21 @@ import { ContadorComponent } from './contador/contador.component';
 })
 export class AppComponent implements OnInit {
   title = 'my-app';
-
-  public personas: any = []
-
-  public contador:ContadorComponent=new ContadorComponent();
+  
+  public contador:ContadorComponent;
 
   constructor(private personasService: PersonasService, private router: Router) {
-  }
-
-  formulario() {
-    this.router.navigateByUrl('formulario');
   }
 
   aniadir() {
     this.router.navigateByUrl('aniadir');
   }
 
-  ngOnInit(): void {
-
-    this.personasService.cargarPersonas()
-      .subscribe((resp) => {
-        this.personas = resp;
-      });
+  listaPersonas() {
+    this.router.navigateByUrl('lista');
   }
 
-
-  procesarBorrado(id: number) {
-    console.log(this.contador.numero)
-
-    this.personas.splice(Number, 1);
-    this.contador.sumar();
-    console.log(this.contador.numero)
+  ngOnInit(): void {
   }
 
 }
