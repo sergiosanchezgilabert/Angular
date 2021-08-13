@@ -12,7 +12,9 @@ export class ListarComponent implements OnInit {
 
   public personas: any = []
 
-  @Input() contador:ContadorComponent=new ContadorComponent();
+  contador: ContadorComponent = new ContadorComponent();
+
+  numero: string | null = "";
 
   constructor(private personasService: PersonasService, private router: Router) { }
 
@@ -22,14 +24,18 @@ export class ListarComponent implements OnInit {
       .subscribe((resp) => {
         this.personas = resp;
       });
+    this.contador.numero = Number( localStorage.getItem("numero"));
+    this.numero=localStorage.getItem("numero");
   }
 
 
   procesarBorrado(id: number) {
     console.log(this.contador.numero)
 
-    this.personas.splice(id-1, 1);
+    this.personas.splice(id - 1, 1);
     this.contador.sumar();
+    localStorage.setItem("numero", this.contador.numero.toString())
+    this.numero=localStorage.getItem("numero");
     console.log(this.contador.numero)
   }
 }
